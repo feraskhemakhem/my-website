@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+// import the different pages, based on https://www.youtube.com/watch?v=xMNhDf5-hvk
+import Home from './Pages/Home';
+import Projects from './Pages/Projects';
+import Resume from './Pages/Resume';
+import {Route, Link} from 'react-router-dom';
+// import navbar
+import NavBar from './NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+    <NavBar />
+    <Route exact path="/my-website/" component={Home} />
+    <Route exact path="/my-website/projects" component={Projects} />
+    <Route exact path="/my-website/resume" component={Resume} />
+  </div>
   );
 }
 
