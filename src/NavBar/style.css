@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* for the nav bar in entirity */
+nav{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-around; /* space around horizontally */
+    align-items: center; /* center vertically */
+    min-height: 8vh;
+    background-color: #ffd9e1;
+}
+
+/* for the part with my name */
+.logo {
+    color: rgb(266, 266, 266);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    color: #497c95;
+}
+
+/* for the ul of links */
+.nav-links {
+    display: flex; /* so that the links are not stacked on top of each other */
+    justify-content: space-around;
+    width: 50%;
+}
+
+/* for each link in the ul */
+.link{
+    color: #497c95;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* for each list element, to remove bullets */
+.nav-links li{
+    list-style: none;
+}
+
+/* mobile view stuff */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(266, 266, 266);
+    margin: 5px;
+}
+
+/* ReAcTIvE Ui */
+
+/* when 1024px or less width increases */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        display: flex; /* so that the links are not stacked on top of each other */
+        justify-content: space-around;
+        width: 60%;
+    }
+}
+
+/* when on a small screen, open up the burger */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* so that we cannot scroll to hidden navbar */
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh; /* + 8vh from nav */
+        top: 8vh;
+        /* background-color: rgba(255, 183, 197, 1);  */
+        background-color: #ffd9e1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%); /* moves it off the screen to be scrolled in */
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0; /* to fade it in */
+    }
+
+    .burger {
+        display: block; /* show the burger */
+    }
+}
+
+
+/* for the open state of the burger menu */
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* animation for showing the menu options when burger is pressed */
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;  
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
