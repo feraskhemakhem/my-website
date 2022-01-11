@@ -1,22 +1,25 @@
-.home {
+.about {
     display: flex;
+    justify-content: center;
+    padding: 5rem 0 0 0;
 }
 
-.hometext {
+.abouttext {
+    width: 40%;
     text-align: left;
-    padding: 5rem 0 0 5rem;
+    font-family: 'Montserrat', sans-serif;
     /* background-color: rgba(183, 255, 241, 0.4);    */
 }
 
-.homeimage {
-    padding: 5rem 5rem 0 0;
+.aboutimage {
+    padding: 1em;
 }
 
-.homeimage img {
+.aboutimage img {
     width: 20rem;
 }
 
-.hometitle {
+.abouttitle {
     color: #bfa0b3;
     text-decoration: none;
     font-weight: bold;
@@ -33,30 +36,130 @@
     list-style: none;
 }
 
-/* https://www.reddit.com/r/MechanicalKeyboards/ */
+.aboutitem {
+    color: #97537d;
+}
 
 .aboutitem a {
-    padding: 0 0 1px;
-    color: black;
-    outline: currentcolor none medium;
-    /* border-bottom: solid 1px; */
-    /* border-bottom-color: rgba(15, 122, 252, 0.2); */
-    text-decoration: none;
-    /* background-color: #ffa3b7; */
-    background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(255, 163, 183, 0.35) calc(50% - 9px), rgba(255, 163, 183, 0.35) 100%);
-    background-size: 100% 200%;
+    color: #97537d;
+
 }
 
-.aboutitem a:hover {
-    /* transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s; */
-    /* background-image: rgba(0, 255, 0, 0.35); */
-    background-color: rgba(255, 163, 183, 0.65);
-    /* border-bottom-color: rgba(208, 64, 0, 0.2); */
-    /* background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%); */
-    text-decoration: none;
+/****************** PROJECTS ******************/
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    height: 1000px;
 }
 
-.aboutitem a:visited {
-    border-bottom-color: rgba(128, 0, 128, 0.2);
+.tabs {
+    /* position: absolute; 
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* padding: 5rem 0 0 0; */
+    /* width: 500px;
+    height: 400px; */
+    width: 75%;
+    background: #f3f5f5;
+    /* padding: 20px 30px; */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px #ccc;
+}
+
+.tabs .tab-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* div for each actual tab on the top */
+/* .tabs .tab-header > div {
+    width: calc(100% / 3);
+    text-align: center;
+    height: 100%;
+    color: #888;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    outline: none;
+} */
+
+.tabs .tab-header > div {
+    height: 100%;
+    width: calc(100% / 3);
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #bfa0b3;
     text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.tabs .tab-header > div.active {
+    top: 0;
+    z-index: 0;
+    background-color: #97537d;
+    color: white;
+    transition: all 1s ease 0s;
+}
+
+/* .tabs .tab-header > div.active {
+    color: #00acee;
+} */
+
+.tabs .tab-header > div > h4 {
+    display: block;
+    position: relative;
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+.tabs .tab-indicator {
+    position: relative;
+    width: calc(100% / 3);
+    height: 5px;
+    background: #00acee;
+    left: 0px;
+    border-radius: 5px;
+    transition: all 500ms ease-in-out;
+}
+
+.tabs .tab-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 5px;
+}
+
+.tabs .tab-body > div {
+    opacity: 0;
+    margin-top: 5px;
+    transform: scale(0.9);
+    /* transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms; */
+}
+
+.tabs .tab-body > div.active { 
+    padding-top: 20px;
+    opacity: 1;
+    transform: scale(1);
+    margin-top: 0px;
+}
+
+.tab-body p {
+    padding-top: 20px;
+    font-size: 14px;
 }

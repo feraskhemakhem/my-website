@@ -6,13 +6,12 @@
 
 /* for the nav bar in entirity */
 nav{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 1.5rem 0 1.5rem 0;
     display: flex;
     justify-content: space-around; /* space around horizontally */
     align-items: center; /* center vertically */
     min-height: 8vh;
-    background-color: #ffd9e1;
+    /* background-color: #ffd9e1; */
 }
 
 /* for the part with my name */
@@ -127,4 +126,51 @@ nav{
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/******************* FOOTER *******************/
+
+footer {
+    /* background: #ffd9e1; */
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
+    padding: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.footer img{
+    opacity: 0.6;
+}
+
+/* .list a{
+    padding: 2rem;
+} */
+
+.list li {
+    list-style: none;
+}
+
+.list {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+/* when hovering, make opacity 1 and make it bigger for these AND navbar */
+
+.footer img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* footer has no colour in the background */
+.footer a {
+    box-shadow: none;
 }

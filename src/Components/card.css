@@ -1,0 +1,75 @@
+/* entire card */
+.card-container {
+    width: 35rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px -5px;
+    transition: 0.5s;
+    animation: ease-in;
+    background-color: rgba(255, 255, 255, 0.774);
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+}
+
+.card-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 0;
+}
+
+/* actual image */
+.image-container img{
+    overflow: hidden;
+    height: 200px;
+}
+
+/* around image */
+.image-container {
+    padding: 1rem;
+}
+
+/* card besides title */
+.card-content {
+    margin: 1rem;
+    margin-top: 0.5rem;
+}
+
+.card-content p {
+    font-weight: 300;
+}
+
+h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+/* title of the card */
+.card-title {
+    margin: 0.5rem 0 0.5rem 0;
+    letter-spacing: 2px;
+    font-variant-caps: all-small-caps;
+    font-size: x-large;
+}
+
+.card-title h3 {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* text in the card */
+.card-body {
+    text-align: justify;
+}
+
+.card-body h4 {
+    font-weight: 500;
+}
+
+.tools-link {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.card-tools h5 {
+    font-weight: 400;
+}
